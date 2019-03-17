@@ -1,17 +1,17 @@
 package com.amorenew.daggertutorial.activities;
 
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.TextView;
 
 import com.amorenew.daggertutorial.DemoApplication;
 import com.amorenew.daggertutorial.R;
 import com.amorenew.daggertutorial.data.DataManager;
-import com.amorenew.daggertutorial.di.component.ActivityComponent;
-import com.amorenew.daggertutorial.di.module.ActivityModule;
-import com.amorenew.daggertutorial.di.DaggerActivityComponent;
 import com.amorenew.daggertutorial.data.models.User;
+import com.amorenew.daggertutorial.di.component.ActivityComponent;
+import com.amorenew.daggertutorial.di.component.DaggerActivityComponent;
+import com.amorenew.daggertutorial.di.module.ActivityModule;
 
 import javax.inject.Inject;
 
@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
         getActivityComponent().inject(this);
 
-        mTvUserInfo = (TextView) findViewById(R.id.tv_user_info);
-        mTvAccessToken = (TextView) findViewById(R.id.tv_access_token);
+        mTvUserInfo = findViewById(R.id.tv_user_info);
+        mTvAccessToken = findViewById(R.id.tv_access_token);
     }
 
     @Override

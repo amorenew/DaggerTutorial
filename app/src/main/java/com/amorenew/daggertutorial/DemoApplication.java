@@ -5,8 +5,8 @@ import android.content.Context;
 
 import com.amorenew.daggertutorial.data.DataManager;
 import com.amorenew.daggertutorial.di.component.ApplicationComponent;
+import com.amorenew.daggertutorial.di.component.DaggerApplicationComponent;
 import com.amorenew.daggertutorial.di.module.ApplicationModule;
-import com.amorenew.daggertutorial.di.DaggerApplicationComponent;
 
 import javax.inject.Inject;
 
